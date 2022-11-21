@@ -20,7 +20,7 @@ def get_filters():
     # Get user name for personalised greeting
     # Useful article: https://www.askpython.com/python/examples/python-user-input#:~:text=Python%20User%20Input%20from%20Keyboard%20%E2%80%93%20input%20%28%29,for%20the%20user%20input.%20...%20More%20items...%20
     name = input("Hello! Let's explore some US Bikeshare data! Can I please start with your name?\n").lower()
-    print("Hello there, {}! Let's begin!".format(name.title()))
+    print("Welcome, {}! Let's begin!".format(name.title()))
 
     # Get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     cities = ['chicago', 'new york city', 'washington']
