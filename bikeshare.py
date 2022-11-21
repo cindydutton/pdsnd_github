@@ -20,7 +20,7 @@ def get_filters():
     # Get user name for personalised greeting
     # Useful article: https://www.askpython.com/python/examples/python-user-input#:~:text=Python%20User%20Input%20from%20Keyboard%20%E2%80%93%20input%20%28%29,for%20the%20user%20input.%20...%20More%20items...%20
     name = input("Hello! Let's explore some US Bikeshare data! Can I please start with your name?\n").lower()
-    print("Hello there, {}! Let's begin!".format(name.title()))
+    print("Welcome, {}! Let's begin!".format(name.title()))
 
     # Get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     cities = ['chicago', 'new york city', 'washington']
@@ -184,18 +184,18 @@ def user_stats(df):
         gender_count = df['Gender'].value_counts()
         print("The counts of each gender are:\n", gender_count)
     else:
-        print('Sorry! Gender data unavailable for Washington')
+        print('Sorry! Gender data is unavailable for Washington')
 
     # Display earliest, most recent, and most common year of birth
     if('Birth Year' in df):
         min_year = str(int(df['Birth Year'].min()))
-        print("\nThe oldest user is born of the year", min_year)
+        print("\nThe oldest user is born in the year", min_year)
 
         max_year = (int(df['Birth Year'].max()))
-        print("The youngest user is born of the year", max_year)
+        print("The youngest user is born in the year", max_year)
 
         common_year = str(int(df['Birth Year'].mode().values[0]))
-        print("Most users are born of the year", common_year)
+        print("Most users are born in the year", common_year)
 
         print("\nThis took %s seconds." % (time.time() - start_time))
         print('-'*40)
@@ -229,8 +229,8 @@ def main():
         user_stats(df)
         display_data(df)
 
-        restart = input("\nWould you like to restart?\nYes\nNo\n")
-        if restart.lower() != 'yes':
+        restart = input("\nWould you like to restart?\nYes\nNo\n").lower()
+        if restart != 'yes':
             break
 
 
