@@ -229,8 +229,8 @@ def main():
         user_stats(df)
         display_data(df)
 
-        restart = input("\nWould you like to restart?\nYes\nNo\n")
-        if restart.lower() != 'yes':
+        restart = input("\nWould you like to restart?\nYes\nNo\n").lower()
+        if restart != 'yes':
             break
 
 
